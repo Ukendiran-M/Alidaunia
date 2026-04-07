@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemi Digitali Avanzati - Alidaunia Services</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; background: #fff; color: #000; line-height: 1.6; margin: 0; padding: 0; }
+        
+        #site-header { padding: 0 !important; }
+
+        .hero-split-container { display: flex; flex-direction: column; }
+        .hero-split-image { width: 100%; height: 50vh; min-height: 400px; object-fit: cover; filter: grayscale(100%); transition: filter 0.5s ease; border: none; }
+        .hero-split-image:hover { filter: grayscale(0%); }
+
+        .content-container { max-width: var(--nav-max, 1400px); margin: -100px auto 0 auto; padding: 0 40px 100px 40px; position: relative; z-index: 10; }
+        
+        .page-badge { font-weight: bold; font-size: 0.8rem; text-transform: uppercase; color: #111; margin-bottom: 20px; display: block; letter-spacing: 0.05em; }
+
+        .service-header-box { background: #fff; padding: 60px 80px; border: 4px solid #000; margin-bottom: 80px; box-shadow: 15px 15px 0px #000; }
+        .page-header { font-size: 4rem; font-weight: 800; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1; }
+        .intro-lead { font-size: 1.5rem; font-weight: 300; max-width: 900px; margin: 0; color: #333; line-height: 1.5; }
+
+        /* First Grid Section */
+        .service-body { display: grid; grid-template-columns: 2fr 1fr; gap: 80px; align-items: start; margin-bottom: 80px; }
+        
+        .main-text h2 { font-size: 2rem; font-weight: 800; text-transform: uppercase; border-bottom: 2px solid #000; padding-bottom: 10px; margin: 0 0 20px 0; letter-spacing: -0.01em; }
+        .main-text p { font-size: 1.15rem; color: #111; margin-bottom: 25px; line-height: 1.7; font-weight: 300; }
+        
+        .features-column { display: flex; flex-direction: column; gap: 40px; border-top: 2px solid #000; padding-top: 40px; }
+        .feature-item h3 { font-size: 1.2rem; text-transform: uppercase; margin: 0 0 10px 0; border-bottom: 1px solid #000; padding-bottom: 8px; font-weight: 800; }
+        .feature-item p { font-size: 1rem; color: #444; margin: 0; line-height: 1.5; }
+
+        /* Massive Dark Block */
+        .dark-highlight-section { background: #000; color: #fff; padding: 60px 80px; margin: 0 -40px 80px -40px; }
+        .dark-highlight-section h2 { font-size: 2.5rem; font-weight: 800; margin: 0 0 30px 0; text-transform: uppercase; letter-spacing: -0.01em; border-bottom: 2px solid #333; padding-bottom: 20px; }
+        .dark-lead { font-size: 1.5rem; font-weight: 300; color: #ccc; margin-bottom: 40px; line-height: 1.4; border-left: 4px solid #fff; padding-left: 20px; }
+        
+        .dark-list-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .dark-list-grid ul { list-style: none; padding: 0; margin: 0; }
+        .dark-list-grid li { font-size: 1.1rem; margin-bottom: 20px; padding-left: 25px; position: relative; color: #ddd; }
+        .dark-list-grid li::before { content: '→'; position: absolute; left: 0; color: #fff; font-weight: bold; }
+
+        /* Functional Features Grid */
+        .aio-grid { border-top: 4px solid #000; padding-top: 60px; }
+        .aio-grid h2 { font-size: 2.5rem; text-transform: uppercase; margin: 0 0 40px 0; letter-spacing: -0.02em; font-weight: 800; }
+        
+        .aio-columns { display: column; column-count: 2; column-gap: 80px; }
+        .aio-columns ul { list-style: none; padding: 0; margin: 0; }
+        .aio-columns li { font-size: 1.1rem; margin-bottom: 25px; padding-left: 25px; position: relative; font-weight: 600; break-inside: avoid; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .aio-columns li::before { content: '■'; position: absolute; left: 0; color: #000; font-size: 0.6em; top: 0.4em; }
+
+        @media (max-width: 900px) {
+            .service-body { grid-template-columns: 1fr; gap: 60px; }
+            .service-header-box { padding: 40px 30px; box-shadow: 10px 10px 0px #000; margin-bottom: 60px; margin-top: -60px; }
+            .page-header { font-size: 2.5rem; }
+            .dark-highlight-section { padding: 40px 20px; margin: 0 -20px 60px -20px; }
+            .dark-list-grid, .aio-columns { grid-template-columns: 1fr; column-count: 1; gap: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <script src="header.js"></script>
+
+    <div class="hero-split-container">
+        <img src="../images/image62.png" alt="Digital Systems / Avionics" class="hero-split-image" />
+    </div>
+
+    <div class="content-container">
+        <span class="page-badge">Servizi / 03</span>
+        
+        <div class="service-header-box">
+            <h1 class="page-header">Sistemi Digitali Avanzati</h1>
+            <p class="intro-lead">Analisi avanzata dei dati per monitorare le prestazioni operative aeroportuali, fornendo strumenti evoluti per la geolocalizzazione ed i sistemi di navigazione.</p>
+        </div>
+
+        <div class="service-body">
+            <div class="main-text">
+                <h2>L’Idea di Avionica</h2>
+                <p>Nel prossimo futuro utilizzeremo il trasporto aereo per spostare persone e merci nelle aree metropolitane e l’intero processo sarà digitale. Lo spazio aereo sarà densamente popolato di veicoli, proprio come le nostre strade oggi, e per gestirlo in modo efficiente ci sarà bisogno di sistemi digitali avanzati.</p>
+                <p>Oggi assistiamo a numerosi investimenti nello sviluppo di nuovi eVTOL per spostare persone e merci a costi accessibili. Tuttavia il volo a bassa quota non è ancora sicuro e gli incidenti continuano a verificarsi in quanto i tradizionali sistemi di gestione non sono in grado di monitorarlo costantemente. È qui che entrano in gioco i nostri sistemi avanzati.</p>
+
+                <h2 style="margin-top: 60px;">Stand Alone Integrated Monitoring Systems (SAIMS)</h2>
+                <p>Negli ultimi anni, l’aviazione fa sempre maggiore affidamento sui sistemi di navigazione satellitare (GPS/GNSS) per le rotte Point Performance-Based Navigation (PBN). Tuttavia, questi sistemi possono essere vulnerabili a interferenze e manipolazioni del segnale.</p>
+                <p>In questo contesto, i dati di geo-posizionamento derivati dai radar di terra assumono un ruolo fondamentale. I radar forniscono informazioni affidabili anche in condizioni di interferenza GNSS, fungendo da fail-safe per mantenere la consapevolezza situazionale e garantire la continuità operativa in modalità degradata.</p>
+            </div>
+
+            <div class="features-column">
+                <div class="feature-item">
+                    <h3>Raccolta Dati Avanzata</h3>
+                    <p>Utilizziamo tecnologie avanzate per raccogliere dati critici in tempo reale sulle operazioni di volo e sulle condizioni strutturali delle piattaforme.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Analisi delle Performance</h3>
+                    <p>Forniamo servizi di data analysis per monitorare e ottimizzare le prestazioni operative infrastrutturali, riducendo i colli di bottiglia.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Monitoraggio IoT Continuo</h3>
+                    <p>Sensori IoT e Radar 3D raccolgono dati ambientali e strutturali permettendo una gestione proattiva e predittiva delle infrastrutture.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dark-highlight-section">
+            <h2>L'Ecosistema AIO &amp; SAIMS</h2>
+            <p class="dark-lead">Il SAIMS è un sistema integrato che gestisce in complementarietà l'impiantistica di terra e la geolocalizzazione RADAR-GNSS degli aeromobili. Il sistema All-In-One (AIO) fa da cervello alla piattaforma.</p>
+            
+            <div class="dark-list-grid">
+                <ul>
+                    <li>L'uso combinato di radar e GNSS offre una ridondanza essenziale per la sicurezza totale del volo HEMS e UAM.</li>
+                    <li>Consente il mantenimento del controllo e la massiccia riduzione dei rischi di perdita di precisione e di collisione.</li>
+                    <li>L'architettura supportata da dati radar e GNSS migliora drasticamente la gestione del traffico aereo a bassa quota.</li>
+                </ul>
+                <ul>
+                    <li>Gestiamo la sicurezza durante decollo e atterraggio da e verso gli eliporti per velivoli VTOL ed elicotteri tradizionali.</li>
+                    <li>Sensori avanzati per monitoraggio ambientale, anemometrico e termografico.</li>
+                    <li>Integrazione software tra sistemi radar, protocolli FIXM/AIXM e piattaforme digitali.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="aio-grid">
+            <h2>Funzionalità Centralina (AIO)</h2>
+            <div class="aio-columns">
+                <ul>
+                    <li>Apparato telecomunicazione banda larga satellitare bidirezionale flat</li>
+                    <li>Controllo video delle elisuperfici in tempo reale tramite PTZ/Termiche</li>
+                    <li>Attivazione remotizzata dell'impianto luci pista e radiofari</li>
+                    <li>Attivazione remotizzata varchi, elettroserrature e sirene ottico-acustiche</li>
+                    <li>Supervisione immediata dello stato energetico delle elisuperfici</li>
+                    <li>Mappatura dello stato vitale degli apparati elettrici e sensori</li>
+                    <li>Ricezione stato allarme / SOS tramite pulsante di emergenza fisico</li>
+                    <li>Emissione Hot Spot Wi-Fi per garantire operatività soccorritori</li>
+                    <li>Utilizzo videocomunicazione crittografata tramite IP</li>
+                    <li>Antisabotaggio con antintrusione immune da attacchi "jamming" elettronici</li>
+                    <li>Ripristino e reset elettrico hardware con building automation backup</li>
+                    <li>Accessibilità software via desktop, mobile e tablet da dashboard unificata</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

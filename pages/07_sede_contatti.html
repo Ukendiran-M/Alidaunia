@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sede e Contatti - Alidaunia Services</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; background: #fff; color: #000; line-height: 1.6; margin: 0; padding: 0; }
+        
+        #site-header { padding: 0 !important; }
+        
+        .page-badge { font-weight: bold; font-size: 0.8rem; text-transform: uppercase; color: #111; margin-bottom: 20px; display: block; letter-spacing: 0.05em; }
+
+        /* Full Screen Split Layout */
+        .architectural-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: calc(100vh - var(--nav-h, 0px));
+            width: 100%;
+        }
+
+        /* Left Side: Map and Info */
+        .left-map-sector {
+            background: #fafafa;
+            display: flex;
+            flex-direction: column;
+            border-right: 2px solid #000;
+        }
+
+        .map-placeholder {
+            flex-grow: 1;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            min-height: 40vh;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 60px;
+            background: #fff;
+            border-top: 2px solid #000;
+        }
+
+        .info-block h2 { font-size: 1rem; font-weight: 800; text-transform: uppercase; margin: 0 0 5px 0; color: #666; letter-spacing: 0.05em; }
+        .info-block p { font-size: 1.25rem; font-weight: 800; margin: 0 0 5px 0; color: #000; letter-spacing: -0.01em; }
+        .info-block span { font-size: 1rem; color: #333; line-height: 1.4; display: block; }
+        
+        .contact-phones { margin-top: 5px; }
+
+        /* Right Side: Contact Form */
+        .right-form-sector {
+            padding: 80px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+        }
+
+        .page-header { font-size: 4rem; font-weight: 800; margin: 0 0 60px 0; border-bottom: 4px solid #000; padding-bottom: 20px; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; }
+
+        .minimalist-form { display: flex; flex-direction: column; gap: 40px; }
+        
+        /* Floating logic minimalist inputs */
+        .form-group { position: relative; margin-bottom: 10px; }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            background: transparent;
+            padding: 10px 0;
+            font-family: inherit;
+            font-size: 1.25rem;
+            color: #000;
+            outline: none;
+            transition: border-color 0.3s ease;
+            resize: none;
+        }
+        
+        .form-group label {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #999;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .form-group input:focus, .form-group textarea:focus,
+        .form-group input:not(:placeholder-shown), .form-group textarea:not(:placeholder-shown) {
+            border-bottom-color: #000;
+        }
+        
+        .form-group input:focus + label, .form-group textarea:focus + label,
+        .form-group input:not(:placeholder-shown) + label, .form-group textarea:not(:placeholder-shown) + label {
+            top: -20px;
+            font-size: 0.85rem;
+            color: #000;
+        }
+
+        /* Hide native placeholder so the label acts as placeholder */
+        ::placeholder { color: transparent; }
+
+        .submit-btn {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 25px;
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover { background: #333; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        @media (max-width: 1024px) {
+            .architectural-split { grid-template-columns: 1fr; }
+            .right-form-sector { padding: 60px 40px; }
+            .info-grid { grid-template-columns: 1fr; gap: 30px; padding: 40px; }
+            .page-header { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+    <script src="header.js"></script>
+
+    <div class="architectural-split">
+        
+        <!-- Map and Info Side -->
+        <div class="left-map-sector">
+            <div class="map-placeholder">
+                [ GOOGLE MAPS EMBED ]
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-block">
+                    <h2>Sede Legale</h2>
+                    <p>Alidaunia Service S.R.L.</p>
+                    <span>AHVS Advanced Heliport and Vertiport Solutions<br>Terminal House P.T.<br>Foggia S.S.673 km 19,00</span>
+                </div>
+                <div class="info-block">
+                    <h2>Contatti</h2>
+                    <p>Stefano Frasca</p>
+                    <span>Tech Innovation &amp; Research Specialist<br>Customer Care Office:</span>
+                    <span class="contact-phones">+39 334.664.7378<br>+39 0881.617961</span>
+                </div>
+                <div class="info-block" style="grid-column: 1 / -1;">
+                    <h2>Email</h2>
+                    <p>stefano.frasca@alidaunia.it</p>
+                    <span>ufficio.tecnico@alidaunia.it<br>Risposta garantita entro 24h</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Side -->
+        <div class="right-form-sector">
+            <span class="page-badge">Contatti</span>
+            <h1 class="page-header">Scrivici</h1>
+            
+            <form class="minimalist-form" onsubmit="event.preventDefault(); alert('Messaggio inviato!')">
+                <div class="form-group">
+                    <input type="text" id="nome" placeholder="Nome" required>
+                    <label for="nome">Nome / Azienda</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <label for="email">Email O Pec</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" id="tel" placeholder="Telefono">
+                    <label for="tel">Telefono Principale</label>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="msg" rows="4" placeholder="Messaggio" required></textarea>
+                    <label for="msg">Il Tuo Messaggio</label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Invia Richiesta</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

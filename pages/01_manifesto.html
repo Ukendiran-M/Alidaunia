@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifesto - Alidaunia Services</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; background: #fff; color: #000; line-height: 1.6; margin: 0; padding: 60px 40px; }
+        .container { max-width: var(--nav-max, 1400px); margin: 0 auto; position: relative; }
+        
+        .page-badge { font-weight: bold; font-size: 0.8rem; text-transform: uppercase; color: #666; margin-bottom: 30px; display: block; letter-spacing: 0.05em; }
+
+        /* Asymmetric Layout */
+        .manifesto-blueprint { display: grid; grid-template-columns: 1fr 1.5fr; gap: 0; align-items: end; margin-bottom: 100px; padding-top: 40px; }
+        
+        /* Left: Typography Box that overlaps slightly right */
+        .manifesto-typography {
+            background: #fff;
+            padding: 40px 60px 0 0;
+            z-index: 10;
+            margin-right: -80px; /* Force overlap */
+        }
+        
+        .hero-title { font-size: 5.5rem; font-weight: 800; line-height: 1; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: -0.02em; }
+        .hero-sub { font-size: 1.5rem; color: #666; font-weight: 300; margin: 0 0 60px 0; text-transform: uppercase; letter-spacing: 0.1em; }
+
+        /* Massive Drop Cap implementation */
+        .drop-cap-quote {
+            font-size: 1.8rem;
+            font-weight: 300;
+            line-height: 1.4;
+            margin: 0;
+            color: #111;
+        }
+        .drop-cap-quote::first-letter {
+            font-size: 7rem;
+            font-weight: 800;
+            float: left;
+            line-height: 0.75;
+            padding-right: 20px;
+            padding-top: 10px;
+            color: #000;
+        }
+
+        /* Right: Image Banner */
+        .hero-image-banner {
+            width: 100%;
+            height: 70vh;
+            min-height: 500px;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+        }
+        .hero-image-banner:hover { filter: grayscale(0%); }
+
+        /* Secondary actions below */
+        .actions-blueprint { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; border-top: 2px solid #000; padding-top: 60px; margin-top: 20px; }
+        .action-item h3 { font-size: 1.4rem; text-transform: uppercase; margin: 0 0 20px 0; letter-spacing: 0.05em; border-bottom: 1px solid #000; padding-bottom: 10px; }
+        .action-item p { font-size: 1.15rem; color: #333; margin: 0; line-height: 1.8; }
+
+        /* Signature block */
+        .signature-block { text-align: right; margin-top: 100px; font-size: 1.5rem; font-weight: 800; text-transform: uppercase; border-top: 1px solid #eee; padding-top: 30px; }
+        .signature-block span { display: block; font-weight: 400; font-size: 1rem; color: #666; margin-top: 5px; }
+
+        @media (max-width: 1024px) {
+            .manifesto-blueprint { grid-template-columns: 1fr; gap: 40px; align-items: start; }
+            .manifesto-typography { margin-right: 0; padding: 0 0 40px 0; }
+            .hero-image-banner { height: 50vh; }
+            .actions-blueprint { grid-template-columns: 1fr; gap: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <script src="header.js"></script>
+    <div class="container">
+        <span class="page-badge">Pagina 01</span>
+
+        <div class="manifesto-blueprint">
+            <div class="manifesto-typography">
+                <h1 class="hero-title">Manifesto</h1>
+                <p class="hero-sub">Ethics and Values</p>
+                
+                <div class="drop-cap-quote">
+                    Se desideri soluzioni complete e personalizzate per Eliporti, Elisuperfici e Vertiporti, associate alla
+                    massima sicurezza e funzionalità.
+                </div>
+            </div>
+            
+            <img src="../images/image51.jpeg" alt="Bristow Heliport Aerial View" class="hero-image-banner" />
+        </div>
+
+        <div class="actions-blueprint">
+            <div class="action-item">
+                <h3>Scegli</h3>
+                <p>Il nostro AHVS Management che con un approccio integrato segue i nostri clienti in ogni fase del progetto e della sua gestione, assicurando la perfetta operatività e conformità alle normative vigenti.</p>
+            </div>
+            <div class="action-item">
+                <h3>Affidati</h3>
+                <p>Alla nostra lunga esperienza che, attraverso l'ausilio di una innovativa tecnologia in continua evoluzione, assicura il massimo sviluppo e la concreta realizzazione del Vs "Mobility and Transport Business".</p>
+            </div>
+        </div>
+
+        <div class="signature-block">
+            Roberto Pucillo
+            <span>CEO e founder</span>
+        </div>
+    </div>
+</body>
+</html>

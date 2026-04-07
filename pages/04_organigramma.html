@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organigramma Aziendale - Alidaunia Services</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; background: #fff; color: #000; line-height: 1.6; margin: 0; padding: 60px 40px; }
+        .container { max-width: var(--nav-max, 1400px); margin: 0 auto; text-align: center; }
+        .page-badge { font-weight: bold; font-size: 0.8rem; text-transform: uppercase; color: #666; margin-bottom: 20px; display: block; letter-spacing: 0.05em; text-align: left; }
+        
+        .page-header { font-size: 4rem; font-weight: 800; margin: 0 0 40px 0; border-bottom: 2px solid #000; padding-bottom: 20px; text-transform: uppercase; letter-spacing: -0.02em; text-align: left; }
+
+        .hero-image-banner { width: 100%; height: 30vh; min-height: 250px; object-fit: cover; border: none; margin-bottom: 80px; display: block; filter: grayscale(100%); transition: filter 0.5s ease; }
+        .hero-image-banner:hover { filter: grayscale(0%); }
+
+        /* Architectural Blueprint Tree */
+        .tree-container { display: flex; flex-direction: column; align-items: center; margin-top: 40px; overflow-x: auto; padding-bottom: 60px; }
+        
+        .node {
+            background: #fff;
+            border: 2px solid #000;
+            padding: 15px 30px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            position: relative;
+            min-width: 200px;
+            transition: all 0.3s ease;
+        }
+
+        .node.root { background: #000; color: #fff; border-color: #000; font-size: 1.3rem; padding: 20px 40px; }
+        
+        /* The lines connecting nodes */
+        .wrapper-children {
+            display: flex;
+            gap: 60px;
+            position: relative;
+            margin-top: 40px;
+            padding-top: 40px;
+        }
+
+        /* Top connecting horizontal line */
+        .wrapper-children::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20%;
+            right: 20%;
+            height: 1px;
+            background: #000;
+        }
+        
+        @media (max-width: 768px) {
+            .wrapper-children { gap: 20px; }
+            .node { min-width: 130px; font-size: 0.8rem; padding: 10px; }
+        }
+
+        .branch { display: flex; flex-direction: column; align-items: center; position: relative; }
+        
+        /* Vertical line dropping from horizontal line to children */
+        .branch::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            width: 1px;
+            height: 40px;
+            background: #000;
+        }
+
+        /* Vertical line dropping from parent to horizontal line */
+        .node.root::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            width: 1px;
+            height: 40px;
+            background: #000;
+        }
+        
+        /* Grandchildren wrapper logic */
+        .wrapper-grandchildren {
+            display: flex;
+            gap: 20px;
+            position: relative;
+            margin-top: 40px;
+            padding-top: 40px;
+            max-width: 600px;
+        }
+
+        .wrapper-grandchildren::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 15%;
+            right: 15%;
+            height: 1px;
+            background: #000;
+        }
+
+        .node:not(.root)::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            width: 1px;
+            height: 40px;
+            background: #000;
+        }
+        
+        .sub-node-leaf::after { display: none !important; }
+
+        .sub-node {
+            background: #fafafa;
+            border: 1px solid #000;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .node-subtitle {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #666;
+            margin-top: 5px;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+        .node.root .node-subtitle { color: #ccc; }
+
+    </style>
+</head>
+<body>
+    <script src="header.js"></script>
+    <div class="container">
+        <span class="page-badge">Pagine 09 (Sub)</span>
+        <h1 class="page-header">Organigramma Aziendale</h1>
+
+        <img src="../images/image48.png" alt="Operations Overview" class="hero-image-banner" />
+        
+        <div class="tree-container">
+            <div class="node root">
+                CEO & Founder
+                <span class="node-subtitle">Roberto Pucillo</span>
+            </div>
+            
+            <div class="wrapper-children">
+                <!-- Direzione Tecnica -->
+                <div class="branch">
+                    <div class="node">
+                        Technical Director
+                        <span class="node-subtitle">Gestione Progetti</span>
+                    </div>
+                    <div class="wrapper-grandchildren">
+                        <div class="branch"><div class="node sub-node sub-node-leaf">Aviation<br>Engineering</div></div>
+                        <div class="branch"><div class="node sub-node sub-node-leaf">Infastructure<br>Design</div></div>
+                    </div>
+                </div>
+
+                <!-- Divisione Innovazione -->
+                <div class="branch">
+                    <div class="node">
+                        Tech Innovation
+                        <span class="node-subtitle">Stefano Frasca</span>
+                    </div>
+                    <div class="wrapper-grandchildren">
+                        <div class="branch"><div class="node sub-node sub-node-leaf">SAIMS R&D</div></div>
+                        <div class="branch"><div class="node sub-node sub-node-leaf">UAM Integrations</div></div>
+                    </div>
+                </div>
+
+                <!-- Divisione Operativa -->
+                <div class="branch">
+                    <div class="node">
+                        Operations Manager
+                        <span class="node-subtitle">Compliance & Safety</span>
+                    </div>
+                    <div class="wrapper-grandchildren">
+                        <div class="branch"><div class="node sub-node sub-node-leaf">UAS Drones</div></div>
+                        <div class="branch"><div class="node sub-node sub-node-leaf">ATC Control</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

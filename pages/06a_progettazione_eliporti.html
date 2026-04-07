@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progettazione Eliporti - Alidaunia Services</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; background: #fff; color: #000; line-height: 1.6; margin: 0; padding: 0; }
+        
+        /* Navbar adjustment for full width body */
+        #site-header { padding: 0 !important; }
+
+        .hero-split-container { display: flex; flex-direction: column; }
+        .hero-split-image { width: 100%; height: 50vh; min-height: 400px; object-fit: cover; filter: grayscale(100%); transition: filter 0.5s ease; border: none; }
+        .hero-split-image:hover { filter: grayscale(0%); }
+
+        .content-container { max-width: var(--nav-max, 1400px); margin: -100px auto 0 auto; padding: 0 40px 100px 40px; position: relative; z-index: 10; }
+        
+        .page-badge { font-weight: bold; font-size: 0.8rem; text-transform: uppercase; color: #111; margin-bottom: 20px; display: block; letter-spacing: 0.05em; }
+
+        .service-header-box { background: #fff; padding: 60px 80px; border: 4px solid #000; margin-bottom: 80px; box-shadow: 15px 15px 0px #000; }
+        .page-header { font-size: 4rem; font-weight: 800; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1; }
+        .intro-lead { font-size: 1.5rem; font-weight: 300; max-width: 900px; margin: 0; color: #333; line-height: 1.5; }
+
+        .service-body { display: grid; grid-template-columns: 2fr 1fr; gap: 80px; align-items: start; }
+        .main-text p { font-size: 1.15rem; color: #111; margin-bottom: 25px; line-height: 1.7; font-weight: 300; }
+        .main-text strong { font-weight: 700; color: #000; }
+        
+        .features-column { display: flex; flex-direction: column; gap: 40px; border-top: 2px solid #000; padding-top: 40px; }
+        
+        .feature-item { position: relative; }
+        .feature-item::before { content: '0' counter(feature-counter); font-size: 4rem; font-weight: 800; color: #f0f0f0; position: absolute; top: -30px; left: -15px; z-index: -1; line-height: 1; letter-spacing: -0.05em; }
+        body { counter-reset: feature-counter; }
+        .feature-item { counter-increment: feature-counter; }
+
+        .feature-item h3 { font-size: 1.2rem; text-transform: uppercase; margin: 0 0 10px 0; border-bottom: 1px solid #000; padding-bottom: 8px; font-weight: 800; }
+        .feature-item p { font-size: 1rem; color: #444; margin: 0; line-height: 1.5; }
+
+        @media (max-width: 900px) {
+            .service-body { grid-template-columns: 1fr; gap: 60px; }
+            .service-header-box { padding: 40px 30px; box-shadow: 10px 10px 0px #000; margin-bottom: 60px; margin-top: -60px; }
+            .page-header { font-size: 2.5rem; }
+            .intro-lead { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <script src="header.js"></script>
+
+    <div class="hero-split-container">
+        <img src="../images/image63.png" alt="3D Architectural Render: Vertiport Close-Up" class="hero-split-image" />
+    </div>
+
+    <div class="content-container">
+        <span class="page-badge">Servizi / 01</span>
+        
+        <div class="service-header-box">
+            <h1 class="page-header">Progettazione e Realizzazione di Eliporti e Vertiporti</h1>
+            <p class="intro-lead">Soluzioni su misura per eliporti e vertiporti che rispettano le normative internazionali e si integrano armoniosamente nell'ambiente.</p>
+        </div>
+
+        <div class="service-body">
+            <div class="main-text">
+                <p>AHVS Management è specializzata nella progettazione e realizzazione di eliporti e vertiporti per diverse esigenze. Che si tratti di eliporti su tetti per edifici commerciali e residenziali, eliporti su hub ospedalieri, reti provinciali e regionali a servizio di VVF, Protezione Civile o elisoccorso, la nostra azienda offre soluzioni personalizzate che garantiscono sicurezza e funzionalità.</p>
+                <p>Ogni progetto è unico e viene sviluppato in stretta collaborazione con il cliente per assicurare che tutte le specifiche tecniche e le esigenze operative siano soddisfatte. Utilizziamo le più moderne tecnologie e materiali per costruire eliporti che non solo rispettano tutte le normative internazionali, ma che sono anche esteticamente integrati armoniosamente nell'ambiente circostante.</p>
+                <p>Una delle nostre specializzazioni è l'installazione di segnalazioni per la visibilità notturna e di sistemi avanzati per migliorare e ottimizzare la sicurezza. La nostra esperienza ci permette di offrire soluzioni innovative e di alta qualità, garantendo che ogni struttura sia sicura e funzionale.</p>
+                <p>I nostri sistemi includono anche la gestione completa delle strutture, dalla manutenzione ordinaria e straordinaria, all'handling e alla movimentazione degli elicotteri. Il nostro obiettivo è fornire una soluzione chiavi in mano che consenta ai nostri clienti di operare in sicurezza e con la massima efficienza.</p>
+                <p>Dalla fase concettuale alla costruzione, il nostro team di esperti è al fianco del cliente. La nostra consulenza copre tutti gli aspetti della progettazione: studi di fattibilità, progettazione architettonica e ingegneristica, gestione del progetto e supervisione dei lavori.</p>
+            </div>
+
+            <div class="features-column">
+                <div class="feature-item">
+                    <h3>Progettazione Personalizzata</h3>
+                    <p>Collaboriamo con i clienti per sviluppare progetti che soddisfano le loro esigenze specifiche e rispettano le normative internazionali.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Tecnologia Avanzata</h3>
+                    <p>Utilizziamo materiali e tecnologie all'avanguardia per costruire eliporti sicuri, funzionali ed esteticamente integrati.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Gestione e Manutenzione</h3>
+                    <p>Offriamo servizi completi di gestione e manutenzione per garantire che le strutture siano sempre in condizioni ottimali.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

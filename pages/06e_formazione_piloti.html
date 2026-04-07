@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formazione Piloti - Alidaunia Services</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; background: #fff; color: #000; line-height: 1.6; margin: 0; padding: 0; }
+        
+        #site-header { padding: 0 !important; }
+
+        .hero-split-container { display: flex; flex-direction: column; }
+        .hero-split-image { width: 100%; height: 50vh; min-height: 400px; object-fit: cover; filter: grayscale(100%); transition: filter 0.5s ease; border: none; }
+        .hero-split-image:hover { filter: grayscale(0%); }
+
+        .content-container { max-width: var(--nav-max, 1400px); margin: -100px auto 0 auto; padding: 0 40px 100px 40px; position: relative; z-index: 10; }
+        
+        .page-badge { font-weight: bold; font-size: 0.8rem; text-transform: uppercase; color: #111; margin-bottom: 20px; display: block; letter-spacing: 0.05em; }
+
+        .service-header-box { background: #fff; padding: 60px 80px; border: 4px solid #000; margin-bottom: 80px; box-shadow: 15px 15px 0px #000; }
+        .page-header { font-size: 4rem; font-weight: 800; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1; }
+        .intro-lead { font-size: 1.5rem; font-weight: 300; max-width: 900px; margin: 0; color: #333; line-height: 1.5; }
+
+        .service-body { display: grid; grid-template-columns: 2fr 1fr; gap: 80px; align-items: start; }
+        .main-text p { font-size: 1.15rem; color: #111; margin-bottom: 25px; line-height: 1.7; font-weight: 300; }
+        
+        .features-column { display: flex; flex-direction: column; gap: 40px; border-top: 2px solid #000; padding-top: 40px; }
+        
+        .feature-item { position: relative; }
+        .feature-item::before { content: '0' counter(feature-counter); font-size: 4rem; font-weight: 800; color: #f0f0f0; position: absolute; top: -30px; left: -15px; z-index: -1; line-height: 1; letter-spacing: -0.05em; }
+        body { counter-reset: feature-counter; }
+        .feature-item { counter-increment: feature-counter; }
+
+        .feature-item h3 { font-size: 1.2rem; text-transform: uppercase; margin: 0 0 10px 0; border-bottom: 1px solid #000; padding-bottom: 8px; font-weight: 800; }
+        .feature-item p { font-size: 1rem; color: #444; margin: 0; line-height: 1.5; }
+
+        @media (max-width: 900px) {
+            .service-body { grid-template-columns: 1fr; gap: 60px; }
+            .service-header-box { padding: 40px 30px; box-shadow: 10px 10px 0px #000; margin-bottom: 60px; margin-top: -60px; }
+            .page-header { font-size: 2.5rem; }
+            .intro-lead { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <script src="header.js"></script>
+
+    <div class="hero-split-container">
+        <img src="../images/image100.png" alt="Pilot Training" class="hero-split-image" />
+    </div>
+
+    <div class="content-container">
+        <span class="page-badge">Servizi / 05</span>
+        
+        <div class="service-header-box">
+            <h1 class="page-header">Formazione e Addestramento Piloti</h1>
+            <p class="intro-lead">Programmi di alta qualità per ottenere la licenza di pilota privato (PPL) o commerciale (CPL), con istruttori esperti e simulatori di volo avanzati.</p>
+        </div>
+
+        <div class="service-body">
+            <div class="main-text">
+                <p>AHVS Management offre programmi di formazione e addestramento per piloti, progettati per soddisfare le esigenze di chi desidera ottenere la licenza di pilota privato (PPL) o commerciale (CPL). I nostri corsi sono tenuti da istruttori esperti e utilizzano simulatori di volo di ultima generazione per garantire un apprendimento efficace e sicuro.</p>
+                <p>Il nostro programma di formazione copre tutte le fasi dell'addestramento, dalla teoria alla pratica, e include esercitazioni in volo reale e in simulatore. Gli studenti imparano a gestire una vasta gamma di situazioni di volo, preparandosi ad affrontare con competenza qualsiasi scenario operativo.</p>
+                <p>Oltre alla formazione per piloti di elicotteri e aerei, offriamo anche corsi di addestramento per l'uso commerciale dei droni, rispondendo alla crescente domanda di competenze specializzate in questo settore. Il nostro obiettivo è formare piloti altamente qualificati, pronti a operare con sicurezza e professionalità.</p>
+            </div>
+
+            <div class="features-column">
+                <div class="feature-item">
+                    <h3>Istruttori Esperti</h3>
+                    <p>I nostri corsi sono tenuti da istruttori con anni di esperienza nel settore dell'aviazione.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Tecnologia Avanzata</h3>
+                    <p>Utilizziamo simulatori di volo di ultima generazione per garantire un apprendimento efficace e sicuro.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Formazione Completa</h3>
+                    <p>Offriamo programmi che coprono tutte le fasi dell'addestramento, per piloti di elicotteri, aerei e droni.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
